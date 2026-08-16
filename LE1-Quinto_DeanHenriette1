@@ -1,0 +1,16 @@
+
+#include <stdio.h>
+
+int main() {
+    printf("**********************************************\n");
+    printf("<3           STUDENT PROFILE                <3\n");
+    printf("**********************************************\n");
+    printf("* Name: Dean Henriette T. Quinto\n");
+    printf("* Course & Section: BSIT 1-14\n");
+    printf("* Year Level: 1st Year\n");
+    printf("**********************************************\n");
+    printf("<3 C PROGRAMMING - COMPUTER PROGRAMMING 1   <3\n");
+    printf("**********************************************\n");
+
+    return 0;
+}
