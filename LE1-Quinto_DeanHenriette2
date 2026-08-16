@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    printf("~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~\n");
+    printf(" | <3 . * . <3 . * . <3 . * . <3 . * . <3 . * . <3  |\n");
+    printf("~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~\n");
+    printf(" |                                                  |\n");
+    printf(" |            WELCOME TO C PROGRAMMING              |\n");
+    printf(" |                                                  |\n");
+    printf(" |         <3  LEARN * CODE * DEBUG  <3             |\n");
+    printf(" |                                                  |\n");
+    printf("~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~\n");
+    printf(" |                                                  |\n");
+    printf(" |    \"Every line of code is a step toward          |\n");
+    printf(" |     creating something extraordinary.\"           |\n");
+    printf(" |                                                  |\n");
+    printf("~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~\n");
+    printf(" | <3 . * . <3 . * . <3 . * . <3 . * . <3 . * . <3  |\n");
+    printf("~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~\n");
+
+    return 0;
+   }
