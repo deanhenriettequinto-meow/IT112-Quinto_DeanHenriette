@@ -1,0 +1,73 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main() {
+    int numStudents, i;
+    char name[100];
+    int age;
+    char course[100];
+    char buffer[256];
+
+    // --- WRITING STUDENT DATABASE ---
+    printf("Writing Student Database:\n");
+    printf("How many students do you want to record? ");
+    scanf("%d", &numStudents);
+    
+    // Clear the input buffer after reading the integer
+    while (getchar() != '\n');
+
+    // Open file with write mode "w"
+    FILE *file = fopen("student_records.txt", "w");
+    if (file == NULL) {
+        printf("Error opening file for writing!\n");
+        return 1;
+    }
+
+    for (i = 1; i <= numStudents; i++) {
+        printf("\nStudent %d\n", i);
+        
+        printf("Enter Name: ");
+        fgets(name, sizeof(name), stdin);
+        // Remove trailing newline character if present
+        name[strcspn(name, "\n")] = 0;
+
+        printf("Enter Age: ");
+        scanf("%d", &age);
+        
+        // Clear input buffer
+        while (getchar() != '\n');
+
+        printf("Enter Course: ");
+        fgets(course, sizeof(course), stdin);
+        course[strcspn(course, "\n")] = 0;
+
+        // Write student information to the file matching the exact format
+        fprintf(file, "Student %d\n", i);
+        fprintf(file, "Name: %s\n", name);
+        fprintf(file, "Age: %d\n", age);
+        fprintf(file, "Course: %s\n", course);
+        fprintf(file, "-------------------------\n");
+    }
+
+    fclose(file);
+    printf("\nStudent database successfully saved to file.\n");
+
+    // --- READING STUDENT DATABASE ---
+    printf("\nReading Student Database:\n\n");
+
+    // Open file with read mode "r"
+    file = fopen("student_records.txt", "r");
+    if (file == NULL) {
+        printf("Error opening file for reading!\n");
+        return 1;
+    }
+
+    // Read the file line-by-line using fgets() and display it on the terminal
+    while (fgets(buffer, sizeof(buffer), file) != NULL) {
+        printf("%s", buffer);
+    }
+
+    fclose(file);
+
+    return 0;
+}
